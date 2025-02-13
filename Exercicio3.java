@@ -23,12 +23,7 @@ public class Exercicio3 {
                 notas[2] = scn.nextDouble();
 
                 for (int i = 0; i < 3; i++) {
-                    if(notas[i]>0){
                     notas[3] += notas[i];
-                    }
-                    else{
-                        System.out.println("Alguma nota e igual a 0... Por favor corrija");
-                    }
                 }
 
                 resultado = notas[3]/3;
