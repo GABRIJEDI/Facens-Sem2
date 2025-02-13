@@ -11,27 +11,33 @@ public class Exercicio4 {
         numeros[0] = 0;
         numeros[1] = 0;
         do {
-            System.out.println("\nInsira o numero: ");
+            System.out.println("\nInsira o numero ou digite 0 para sair: ");
             teste = scn.nextInt();
-            if (teste % 2 == 0) {
+            if (teste % 2 == 0 && teste != 0) {
                 numeros[0] = teste;
                 System.out.println("Par");
                 media++;
                 calculo = numeros[0] + numeros[1];
                 total = calculo / media;
+            } else if (teste == 0) {
+                System.out.println("Fechando...");
+                break;
             } else {
                 System.out.println("Impar");
             }
             System.out.println("A soma de: " + numeros[0] + " e: " + numeros[1] + " e igual a: " + calculo);
             System.out.println("A media e: " + total);
-            System.out.println("Insira o proximo numero: ");
+            System.out.println("Insira o proximo numero ou digite 0 para sair: ");
             teste = scn.nextInt();
-            if (teste % 2 == 0) {
+            if (teste % 2 == 0 && teste != 0) {
                 numeros[1] = teste;
                 System.out.println("Par");
                 calculo = numeros[0] + numeros[1];
                 media++;
                 total = calculo / media;
+            } else if (teste == 0) {
+                System.out.println("fechando...");
+                break;
             } else {
                 System.out.println("Impar");
             }
