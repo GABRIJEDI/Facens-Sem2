@@ -10,14 +10,14 @@ public class Exercicio6 {
         int[] numerosImpar = new int[10];
         int teste = 0;
 
-        for(int i=0; i<10; i++){
+        for (int i = 0; i < 10; i++) {
             System.out.println("Insira o numero: ");
             teste = scn.nextInt();
             numeros[i] = teste;
 
-            if(teste %2 == 0 && teste != 0){
+            if (teste % 2 == 0) {
                 numerosPar[i] = teste;
-            } else if(teste %2 != 0 && teste != 0){
+            } else if (teste % 2 != 0) {
                 numerosImpar[i] = teste;
             } else {
                 System.out.println("valor invalido");
@@ -25,19 +25,19 @@ public class Exercicio6 {
         }
 
         System.out.println("Os numeros sao: ");
-        for(int i=0; i<10; i++){
+        for (int i = 0; i < 10; i++) {
             System.out.println(numeros[i]);
         }
 
         System.out.println("Os numeros pares sao: ");
-        for(int i=0; i<10; i++){
+        for (int i = 0; i < 10; i++) {
             System.out.println(numerosPar[i]);
         }
 
         System.out.println("Os numeros impar sao: ");
-        for(int i=0; i<10; i++){
+        for (int i = 0; i < 10; i++) {
             System.out.println(numerosImpar[i]);
         }
-    
+
     }
 }
