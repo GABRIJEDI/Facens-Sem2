@@ -22,7 +22,7 @@ public class Exercicio7 {
                     + " Com o acrecimo de 20% e igual a: " + aumento
                     + " A media entre esses valores e igual a: " + media);
 
-            System.out.println("Insira o codigo do produto: ");
+            System.out.println("\nInsira o codigo do produto: ");
             cod = scn.nextDouble();
         }
     }
