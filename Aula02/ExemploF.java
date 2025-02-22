@@ -1,14 +1,9 @@
 package Aula02;
 
-<<<<<<< Updated upstream
-public class Aluno {
+public class ExemploF {
 private    String RA;
 private    String nome;
 private    String curso;
-=======
-public class ExemploF {
-private    String RA;
->>>>>>> Stashed changes
 
 public String getRA(){
     return RA;
