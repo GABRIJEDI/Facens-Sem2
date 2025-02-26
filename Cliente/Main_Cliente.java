@@ -31,7 +31,7 @@ public class Main_Cliente {
             cliente[i].setIDade(idade);
         }
 
-        System.out.println("Insira o CPF do cliente que deseja visualizar: ");
+        System.out.println("\nInsira o CPF do cliente que deseja visualizar: ");
         cpf = scn.nextLine();
         for (int i = 0; i < clientes; i++) {
             if (cliente[i].getCPF().equals(cpf)) {
