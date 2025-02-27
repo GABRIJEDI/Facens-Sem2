@@ -52,9 +52,14 @@ public class AnimalMain {
                     }
                     break;
                 case 3:
-                    System.out
-                            .println("Ja esta na hora de dormir? Tudo bem, vamos colocar " + nome + " Para descansar!");
-                    animal.Dormir();
+                    if (animal.getEnergia() == 100) {
+                        System.out.println("" + nome + " esta cheio de energia! canse ele antes de dormir!");
+                    } else {
+                        System.out
+                                .println("Ja esta na hora de dormir? Tudo bem, vamos colocar " + nome
+                                        + " Para descansar!");
+                        animal.Dormir();
+                    }
                     break;
                 case 4:
                     System.out.println("Claro. Os status de " + nome + " sao:");
