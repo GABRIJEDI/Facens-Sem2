@@ -2,6 +2,8 @@ package Animal;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class AnimalMain {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -9,69 +11,65 @@ public class AnimalMain {
         String nome, tipo;
         int escolha, idade;
 
-        System.out.println("\nOla bem vindo");
-        System.out.println("Vamos registar seu animal primeiro!");
-        System.out.println("Qual o nome do seu animal?");
-        nome = scn.nextLine();
+        JOptionPane.showMessageDialog(null, "Bem Vindo.\nVamos registar seu animal primeiro!");
+        nome = JOptionPane.showInputDialog("Qual o nome do seu animal?");
         animal.setNome(nome);
-        System.out.println("E qual o tipo do seu animal?");
-        tipo = scn.nextLine();
+        tipo = JOptionPane.showInputDialog("E qual o tipo do seu animal?");
         animal.setTipo(tipo);
-        System.out.println("E por ultimo... Qual a idade de " + nome + "?");
-        idade = scn.nextInt();
+        idade = Integer.parseInt(JOptionPane.showInputDialog("E por ultimo... Qual a idade de " + nome + "?"));
         animal.setIdade(idade);
 
-        System.out.println("Otimo! Agora vamos começar a cuidar do seu animal!");
+        JOptionPane.showMessageDialog(null, "Otimo! Agora vamos começar a cuidar do seu animal!");
 
         do {
-            System.out.println("\nO que gostaria de fazer com " + nome + "?");
-            System.out.println("(1) Alimentar!");
-            System.out.println("(2) Brincar!");
-            System.out.println("(3) Dormir!");
-            System.out.println("(4) Ver Status!");
-            System.out.println("\n(0) Encerrar o programa.");
-            escolha = scn.nextInt();
+            escolha = Integer.parseInt(JOptionPane.showInputDialog("O que gostaria de fazer com " + nome + "?" +
+                    "\n(1) Alimentar!" +
+                    "\n(2) Brincar!" +
+                    "\n(3) Dormir!" +
+                    "\n(4) Ver Status!" +
+                    "\n\n(0) Encerrar o programa."));
 
             switch (escolha) {
                 case 1:
-                    System.out.println("Que legal! Vamos alimetar " + nome + " Com a comida favorita dele!!");
+                    JOptionPane.showMessageDialog(null,
+                            "Que legal! Vamos alimentar " + nome + " com a comida favorita dele!!");
                     if (animal.getEnergia() >= 100) {
-                        System.out
-                                .println("\n" + nome + " ja esta cheio... tente alimeta lo depois de brincar com ele!");
+                        JOptionPane.showMessageDialog(null,
+                                "\n" + nome + " ja esta cheio... tente alimeta lo depois de brincar com ele!");
                     } else {
                         animal.Alimentar();
                     }
                     break;
                 case 2:
-                    System.out.println("" + nome + " Vai amar brincar com vc! Mas ele pode ficar cansado!");
+                    JOptionPane.showMessageDialog(null,
+                            "" + nome + " vai amar brincar com vc! Mas ele pode ficar cansado!");
                     if (animal.getEnergia() <= 5) {
-                        System.out.println("\n" + nome
-                                + " Esta muito cansado para brincar... Alimente ele ou coloque ele para dormir!");
+                        JOptionPane.showMessageDialog(null, "\n" + nome
+                                + " esta muito cansado para brincar... Alimente ele ou coloque ele para dormir!");
                     } else {
                         animal.Brincar();
                     }
                     break;
                 case 3:
                     if (animal.getEnergia() == 100) {
-                        System.out.println("" + nome + " esta cheio de energia! canse ele antes de dormir!");
+                        JOptionPane.showMessageDialog(null,
+                                "" + nome + " esta cheio de energia! canse ele antes de dormir!");
                     } else {
-                        System.out
-                                .println("Ja esta na hora de dormir? Tudo bem, vamos colocar " + nome
-                                        + " Para descansar!");
+                        JOptionPane.showMessageDialog(null, "Ja esta na hora de dormir? Tudo bem, vamos colocar " + nome
+                                + " Para descansar!");
                         animal.Dormir();
+                        JOptionPane.showMessageDialog(null, ""+nome+" esta descansado e pronto para brincar mais!");
                     }
                     break;
                 case 4:
-                    System.out.println("Claro. Os status de " + nome + " sao:");
-                    System.out.println(animal.mostrarStatus());
-                    System.out.println("Digite algo para continuar");
-                    scn.nextLine();
+                    JOptionPane.showMessageDialog(null, animal.mostrarStatus());
                     break;
                 case 0:
+                    JOptionPane.showMessageDialog(null, "Encerrando o programa!");
                     escolha = 0;
                     break;
                 default:
-                    System.out.println("Ops... clicou errado? escolha outra opcao!");
+                    JOptionPane.showMessageDialog(null, "Ops... clicou errado? escolha outra opcao!");
                     break;
             }
         } while (escolha != 0);

@@ -70,7 +70,7 @@ public class Sistema {
 
     public String mostrarStatus() {
 
-        return "\nOs status de " + nome + " Sao:" + "\nTipo: " + tipo + "\nEnergia: " + energia + "\nFelicidade: "
+        return "\nClaro! Os status de " + nome + " sao:" + "\nTipo: " + tipo + "\nEnergia: " + energia + "\nFelicidade: "
                 + felicidade;
     }
 }
