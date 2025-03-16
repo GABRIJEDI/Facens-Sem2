@@ -8,6 +8,7 @@ public class AnimalMain {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         Sistema animal = new Sistema(null, null, 0, 100, 100);
+        Object[] interacoes = { "Alimentar", "Brincar", "Dormir", "Ver Status", "Encerrar" };
         String nome, tipo;
         int escolha, idade;
 
@@ -22,15 +23,12 @@ public class AnimalMain {
         JOptionPane.showMessageDialog(null, "Otimo! Agora vamos começar a cuidar do seu animal!");
 
         do {
-            escolha = Integer.parseInt(JOptionPane.showInputDialog("O que gostaria de fazer com " + nome + "?" +
-                    "\n(1) Alimentar!" +
-                    "\n(2) Brincar!" +
-                    "\n(3) Dormir!" +
-                    "\n(4) Ver Status!" +
-                    "\n\n(0) Encerrar o programa."));
+
+            escolha = JOptionPane.showOptionDialog(null, "Escolha o que quer fazer com " + nome, "" + nome,
+                    JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, interacoes, interacoes[0]);
 
             switch (escolha) {
-                case 1:
+                case 0:
                     JOptionPane.showMessageDialog(null,
                             "Que legal! Vamos alimentar " + nome + " com a comida favorita dele!!");
                     if (animal.getEnergia() >= 100) {
@@ -40,7 +38,7 @@ public class AnimalMain {
                         animal.Alimentar();
                     }
                     break;
-                case 2:
+                case 1:
                     JOptionPane.showMessageDialog(null,
                             "" + nome + " vai amar brincar com vc! Mas ele pode ficar cansado!");
                     if (animal.getEnergia() <= 5) {
@@ -50,7 +48,7 @@ public class AnimalMain {
                         animal.Brincar();
                     }
                     break;
-                case 3:
+                case 2:
                     if (animal.getEnergia() == 100) {
                         JOptionPane.showMessageDialog(null,
                                 "" + nome + " esta cheio de energia! canse ele antes de dormir!");
@@ -58,21 +56,21 @@ public class AnimalMain {
                         JOptionPane.showMessageDialog(null, "Ja esta na hora de dormir? Tudo bem, vamos colocar " + nome
                                 + " Para descansar!");
                         animal.Dormir();
-                        JOptionPane.showMessageDialog(null, ""+nome+" esta descansado e pronto para brincar mais!");
+                        JOptionPane.showMessageDialog(null, "" + nome + " esta descansado e pronto para brincar mais!");
                     }
                     break;
-                case 4:
+                case 3:
                     JOptionPane.showMessageDialog(null, animal.mostrarStatus());
                     break;
-                case 0:
+                case 4:
                     JOptionPane.showMessageDialog(null, "Encerrando o programa!");
-                    escolha = 0;
+                    escolha = 4;
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Ops... clicou errado? escolha outra opcao!");
                     break;
             }
-        } while (escolha != 0);
+        } while (escolha != 4);
         scn.close();
     }
 }
