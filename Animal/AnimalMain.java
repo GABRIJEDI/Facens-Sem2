@@ -1,12 +1,9 @@
 package Animal;
 
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
 public class AnimalMain {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
         Sistema animal = new Sistema(null, null, 0, 100, 100);
         Object[] interacoes = { "Alimentar", "Brincar", "Dormir", "Ver Status", "Encerrar" };
         String nome, tipo;
@@ -71,6 +68,5 @@ public class AnimalMain {
                     break;
             }
         } while (escolha != 4);
-        scn.close();
     }
 }
