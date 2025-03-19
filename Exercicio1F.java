@@ -15,6 +15,7 @@ public class Exercicio1F {
         operador = scn.nextInt();
 
         conta(num1, num2, resultado, operador);
+        scn.close();
     }
 
     public static void conta(double num1, double num2, double resultado, int operador) {
@@ -42,5 +43,7 @@ public class Exercicio1F {
                 break;
         }
         System.out.println("O resultado e: " + resultado);
+
+        
     }
 }

@@ -9,6 +9,8 @@ public class Exercicio2F {
         num = scn.nextDouble();
 
         Par(conta, num);
+
+        scn.close();
     }
 
     public static void Par(Double conta, double num) {
