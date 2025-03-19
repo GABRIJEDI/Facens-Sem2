@@ -51,5 +51,7 @@ public class Exercicio8 {
         System.out.println("A media de altura das mulheres e: " + medias[1]);
         System.out.println("A media de idade dos homens e: " + medias[2]);
         System.out.println("O percentual de pessoas entre 18 e 35 anos e: " + medias[3]);
+
+        scn.close();
     }
 }

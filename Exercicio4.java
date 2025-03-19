@@ -44,5 +44,6 @@ public class Exercicio4 {
             System.out.println("A soma de: " + numeros[0] + " e: " + numeros[1] + " e igual a: " + calculo);
             System.out.println("A media e: " + total);
         } while (total > 0);
+        scn.close();
     }
 }

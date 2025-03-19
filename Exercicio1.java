@@ -18,16 +18,18 @@ public class Exercicio1 {
 
             System.out.println("A soma de: " + numeros[0] + " e: " + numeros[1] + " e igual a: " + calculo);
             System.out.println("A media e: " + total);
-            
+
             System.out.println("Insira o proximo numero: ");
             numeros[1] = scn.nextInt();
             calculo = numeros[0] + numeros[1];
             media++;
             total = calculo / media;
-            
+
             System.out.println("A soma de: " + numeros[0] + " e: " + numeros[1] + " e igual a: " + calculo);
             System.out.println("A media e: " + total);
         } while (total > 0);
+
+        scn.close();
     }
 
 }

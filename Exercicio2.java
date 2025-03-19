@@ -61,5 +61,6 @@ public class Exercicio2 {
         System.out.println("O Total de votos nulos foi: " + candidatos[4]);
         System.out.println("O Total de votos em branco foi: " + candidatos[5]);
 
+        scn.close();
     }
 }

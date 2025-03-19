@@ -26,5 +26,7 @@ public class Exercicio9 {
 
         System.out.println("O total de pessoas acima de 90kgs e: " + acima90);
         System.out.println("A media de idade das pessoas e: " + idade);
+
+        scn.close();
     }
 }

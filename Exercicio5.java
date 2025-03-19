@@ -22,5 +22,7 @@ public class Exercicio5 {
         }
         System.out.println("O resultado da soma desses numeros e: " + soma);
         System.out.println("O resultado da multiplicacao desses numeros e: " + multiplic);
+
+        scn.close();
     }
 }

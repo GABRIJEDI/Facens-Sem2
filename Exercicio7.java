@@ -25,5 +25,6 @@ public class Exercicio7 {
             System.out.println("\nInsira o codigo do produto: ");
             cod = scn.nextDouble();
         }
+        scn.close();
     }
 }

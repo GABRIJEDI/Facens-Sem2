@@ -26,13 +26,14 @@ public class Exercicio3 {
                     notas[3] += notas[i];
                 }
 
-                resultado = notas[3]/3;
+                resultado = notas[3] / 3;
 
-                System.out.println("A media do aluno e: "+resultado);
+                System.out.println("A media do aluno e: " + resultado);
 
             } else {
                 System.out.println("Saindo...");
             }
         } while (codigo != 0);
+        scn.close();
     }
 }
