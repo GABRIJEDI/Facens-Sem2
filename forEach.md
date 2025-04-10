@@ -1,9 +1,16 @@
 *FOR EACH
 
-for (Motor motor : motors) {
-motor.print();
+for (Tipo variavel : array/arraylist) {
+variavel.print();
 }
-this.motors.forEach(motor -> motor.print());
+
+ex:
+int[] numeros = {10, 20, 30, 40};
+
+for (int n : numeros) {
+    System.out.println(n);
+}
+
 
 
 
