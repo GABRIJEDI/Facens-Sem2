@@ -153,14 +153,14 @@ public class exercicioMain {
                             }
                         }
 
-                        if (pessoa instanceof Atendente) {
+                        else if (pessoa instanceof Atendente) {
                             Atendente atentmp = ((Atendente) pessoa);
                             if (atentmp.getNumeroCracha() == numeroCracha) {
                                 ((Atendente) pessoa).bonificacao();
                             }
                         }
 
-                        if (pessoa instanceof Funcionario) {
+                        else if (pessoa instanceof Funcionario) {
                             Funcionario functmp = ((Funcionario) pessoa);
                             if (functmp.getNumeroCracha() == numeroCracha) {
                                 ((Funcionario) pessoa).bonificacao(numeroCracha, salario);
