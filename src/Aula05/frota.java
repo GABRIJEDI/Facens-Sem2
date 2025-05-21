@@ -5,7 +5,7 @@ import java.util.ArrayList;
 //exemplo agregacao
 //e fraco, pode apagar o principal mas o objeto relacionado continua vivo
 public class frota {
-    private String nome;
+    private String nome = ;
     private ArrayList<nave> lstnaves;
 
     public frota(String nome) {
